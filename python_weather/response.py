@@ -192,12 +192,14 @@ class Weather(BaseResponse):
     def latitude(self) -> float:
         """ Returns the latitude of the weather's location. """
         lat = self._get('@lat')
+        lat = lat.replace(',','.')
         return float(lat) if lat else None
     
     @property
     def longitude(self) -> float:
         """ Returns the longitude of the weather's location. """
         long = self._get('@long')
+        long = long.replace(',','.')
         return float(long) if long else None
     
     @property
