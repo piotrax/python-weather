@@ -7,7 +7,7 @@ async def getweather():
     client = python_weather.Client(format=python_weather.IMPERIAL)
 
     # fetch a weather forecast from a city
-    weather = await client.find("Calgery Alberta")
+    weather = await client.find("Rogowiec")
 
     # returns the current day's forecast temperature (int)
     print(weather.current.temperature)
