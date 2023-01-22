@@ -4,7 +4,7 @@ import asyncio
 
 async def getweather():
     # declare the client. format defaults to the metric system (celcius, km/h, etc.)
-    client = python_weather.Client(format=python_weather.IMPERIAL)
+    client = python_weather.Client(format=python_weather.METRIC)
 
     # fetch a weather forecast from a city
     weather = await client.find("Rogowiec")
